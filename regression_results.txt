@@ -1,0 +1,111 @@
+--- Model 1: All Countries ---
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:         CO2_per_capita   R-squared:                        0.0323
+Estimator:                   PanelOLS   R-squared (Between):              0.0272
+No. Observations:                 538   R-squared (Within):               0.0323
+Date:                Tue, Dec 23 2025   R-squared (Overall):              0.0167
+Time:                        00:53:30   Log-likelihood                   -1023.3
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      4.1599
+Entities:                          35   P-value                           0.0025
+Avg Obs:                       15.371   Distribution:                   F(4,499)
+Min Obs:                       3.0000                                           
+Max Obs:                       22.000   F-statistic (robust):             4.1599
+                                        P-value                           0.0025
+Time periods:                      22   Distribution:                   F(4,499)
+Avg Obs:                       24.455                                           
+Min Obs:                       7.0000                                           
+Max Obs:                       30.000                                           
+                                                                                
+                                 Parameter Estimates                                  
+======================================================================================
+                    Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+--------------------------------------------------------------------------------------
+const                  4.6570     0.9760     4.7715     0.0000      2.7394      6.5745
+GDP_k                  0.0079     0.0834     0.0951     0.9243     -0.1559      0.1717
+GDP_sq              -5.21e-05     0.0004    -0.1197     0.9048     -0.0009      0.0008
+Rule_of_Law           -0.4368     0.4143    -1.0543     0.2922     -1.2507      0.3772
+Education_Tertiary     0.0296     0.0094     3.1693     0.0016      0.0113      0.0480
+======================================================================================
+
+F-test for Poolability: 103.56
+P-value: 0.0000
+Distribution: F(34,499)
+
+Included effects: Entity
+
+--- Model: High Income ---
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:         CO2_per_capita   R-squared:                        0.0309
+Estimator:                   PanelOLS   R-squared (Between):             -0.5703
+No. Observations:                 222   R-squared (Within):               0.0309
+Date:                Tue, Dec 23 2025   R-squared (Overall):             -0.5219
+Time:                        00:53:30   Log-likelihood                   -512.04
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      1.6096
+Entities:                          16   P-value                           0.1732
+Avg Obs:                       13.875   Distribution:                   F(4,202)
+Min Obs:                       3.0000                                           
+Max Obs:                       21.000   F-statistic (robust):             1.6096
+                                        P-value                           0.1732
+Time periods:                      22   Distribution:                   F(4,202)
+Avg Obs:                       10.091                                           
+Min Obs:                       1.0000                                           
+Max Obs:                       14.000                                           
+                                                                                
+                                 Parameter Estimates                                  
+======================================================================================
+                    Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+--------------------------------------------------------------------------------------
+const                  18.748     4.3010     4.3589     0.0000      10.267      27.228
+GDP_k                 -0.2658     0.1538    -1.7280     0.0855     -0.5691      0.0375
+GDP_sq                 0.0013     0.0008     1.6133     0.1082     -0.0003      0.0028
+Rule_of_Law           -2.0567     1.0670    -1.9275     0.0553     -4.1607      0.0472
+Education_Tertiary     0.0306     0.0187     1.6401     0.1025     -0.0062      0.0675
+======================================================================================
+
+F-test for Poolability: 65.151
+P-value: 0.0000
+Distribution: F(15,202)
+
+Included effects: Entity
+
+--- Model: Low-Middle Income ---
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:         CO2_per_capita   R-squared:                        0.6924
+Estimator:                   PanelOLS   R-squared (Between):              0.4502
+No. Observations:                 316   R-squared (Within):               0.6924
+Date:                Tue, Dec 23 2025   R-squared (Overall):              0.4639
+Time:                        00:53:30   Log-likelihood                   -93.875
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                      164.89
+Entities:                          19   P-value                           0.0000
+Avg Obs:                       16.632   Distribution:                   F(4,293)
+Min Obs:                       7.0000                                           
+Max Obs:                       22.000   F-statistic (robust):             164.89
+                                        P-value                           0.0000
+Time periods:                      22   Distribution:                   F(4,293)
+Avg Obs:                       14.364                                           
+Min Obs:                       6.0000                                           
+Max Obs:                       17.000                                           
+                                                                                
+                                 Parameter Estimates                                  
+======================================================================================
+                    Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+--------------------------------------------------------------------------------------
+const                 -0.1510     0.1457    -1.0363     0.3009     -0.4378      0.1358
+GDP_k                  0.7660     0.0607     12.626     0.0000      0.6466      0.8854
+GDP_sq                -0.0219     0.0036    -6.0275     0.0000     -0.0291     -0.0148
+Rule_of_Law           -0.2295     0.1082    -2.1214     0.0347     -0.4424     -0.0166
+Education_Tertiary    -0.0041     0.0033    -1.2411     0.2156     -0.0107      0.0024
+======================================================================================
+
+F-test for Poolability: 232.08
+P-value: 0.0000
+Distribution: F(18,293)
+
+Included effects: Entity
+
