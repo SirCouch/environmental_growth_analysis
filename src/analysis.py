@@ -49,40 +49,76 @@ def run_analysis():
     
     exog_vars = ['GDP_k', 'GDP_sq', 'Rule_of_Law', 'Education_Tertiary']
     
-    # 3. Full Model (Fixed Effects)
-    print("\n--- Model 1: All Countries (Fixed Effects) ---")
+    # Sample composition (post-dropna) — reported in README
+    def describe_sample(frame, label):
+        n_obs = len(frame)
+        n_entities = frame.index.get_level_values('country').nunique()
+        years = frame.index.get_level_values('year')
+        obs_per_entity = frame.groupby(level='country').size()
+        return (
+            f"{label}: N={n_obs}, entities={n_entities}, "
+            f"years={years.min()}-{years.max()}, "
+            f"avg obs/entity={obs_per_entity.mean():.1f}, "
+            f"min obs/entity={obs_per_entity.min()}, max={obs_per_entity.max()}"
+        )
+
+    # 3. Full Model (Fixed Effects) — clustered SEs by entity
+    print("\n--- Model 1: All Countries (Fixed Effects, clustered SEs) ---")
     exog = sm.add_constant(df[exog_vars])
     mod = PanelOLS(df['CO2_per_capita'], exog, entity_effects=True)
-    res = mod.fit()
+    res = mod.fit(cov_type='clustered', cluster_entity=True)
     print(res)
-    
+
     with open("regression_results.txt", "w") as f:
+        f.write("Standard errors clustered by entity (country) in all models.\n\n")
+        f.write(describe_sample(df, "Full sample") + "\n\n")
         f.write("--- Model 1: All Countries ---\n")
         f.write(str(res) + "\n\n")
 
     # 4. Stratified Analysis
-    # We have 'Income_Group' column. But it's not in index? 
-    # It was in the csv. set_index moves 'country' to index. 'Income_Group' should be a column.
-    
     groups = df['Income_Group'].unique()
-    
+
     for g in groups:
         print(f"\n--- Model for Group: {g} ---")
         sub_df = df[df['Income_Group'] == g]
-        
+
         if sub_df.empty or len(sub_df) < 10:
             print("Not enough data.")
             continue
-            
+
         exog_sub = sm.add_constant(sub_df[exog_vars])
         try:
             mod_sub = PanelOLS(sub_df['CO2_per_capita'], exog_sub, entity_effects=True)
-            res_sub = mod_sub.fit()
+            res_sub = mod_sub.fit(cov_type='clustered', cluster_entity=True)
             print(res_sub)
-            
+
             with open("regression_results.txt", "a") as f:
+                f.write(describe_sample(sub_df, g) + "\n\n")
                 f.write(f"--- Model: {g} ---\n")
                 f.write(str(res_sub) + "\n\n")
+
+            # Turning point + delta-method 95% CI for LMIC
+            if g == 'Low-Middle Income':
+                b1 = res_sub.params['GDP_k']
+                b2 = res_sub.params['GDP_sq']
+                cov = res_sub.cov.loc[['GDP_k', 'GDP_sq'], ['GDP_k', 'GDP_sq']].values
+                tp = -b1 / (2 * b2)  # in thousands of dollars
+                # Jacobian of g = -b1 / (2*b2)
+                dg_db1 = -1.0 / (2 * b2)
+                dg_db2 = b1 / (2 * b2 ** 2)
+                J = np.array([dg_db1, dg_db2])
+                var_tp = float(J @ cov @ J.T)
+                se_tp = np.sqrt(var_tp)
+                lo, hi = tp - 1.96 * se_tp, tp + 1.96 * se_tp
+                tp_line = (
+                    f"LMIC turning point (delta method): "
+                    f"GDP/capita = ${tp*1000:,.0f} "
+                    f"(95% CI: ${lo*1000:,.0f} to ${hi*1000:,.0f}); "
+                    f"SE={se_tp*1000:,.0f}\n\n"
+                )
+                print(tp_line)
+                with open("regression_results.txt", "a") as f:
+                    f.write(tp_line)
         except Exception as e:
             print(f"Model failed for {g}: {e}")
 
