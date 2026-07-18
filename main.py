@@ -12,7 +12,7 @@ def main():
             print("Data cleaning failed.")
             sys.exit(1)
     else:
-        print("Data found. Skipping download (delete csv to re-download).")
+        print("Data found. Skipping download (run src/data_loader.py to refresh it).")
         
     print("\nStep 2: Analysis")
     res = os.system("python src/analysis.py")

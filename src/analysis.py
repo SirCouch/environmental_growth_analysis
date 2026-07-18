@@ -1,143 +1,144 @@
-
-import pandas as pd
-import numpy as np
-from linearmodels.panel import PanelOLS
-import statsmodels.api as sm
 import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
+import statsmodels.api as sm
+from linearmodels.panel import PanelOLS
+
+
+MODEL_COLUMNS = [
+    "GDP_per_capita",
+    "CO2_per_capita",
+    "Education_Tertiary",
+    "Rule_of_Law",
+]
+EXOGENOUS_COLUMNS = ["GDP_k", "GDP_sq", "Rule_of_Law", "Education_Tertiary"]
+LOW_MIDDLE_GROUP = "Low and Middle Income"
+
 
 def load_data(filepath="environmental_data.csv"):
-    df = pd.read_csv(filepath)
-    return df
+    return pd.read_csv(filepath)
+
+
+def describe_sample(frame, label):
+    observations_per_country = frame.groupby(level="country").size()
+    years = frame.index.get_level_values("year")
+    return (
+        f"{label}: N={len(frame)}, countries={len(observations_per_country)}, "
+        f"years={years.min()}-{years.max()}, "
+        f"avg obs/country={observations_per_country.mean():.1f}, "
+        f"min={observations_per_country.min()}, max={observations_per_country.max()}"
+    )
+
+
+def fit_model(frame, include_year_effects):
+    exogenous = sm.add_constant(frame[EXOGENOUS_COLUMNS])
+    model = PanelOLS(
+        frame["CO2_per_capita"],
+        exogenous,
+        entity_effects=True,
+        time_effects=include_year_effects,
+    )
+    return model.fit(cov_type="clustered", cluster_entity=True)
+
+
+def format_result(result):
+    return "\n".join(line.rstrip() for line in str(result).splitlines())
+
+
+def turning_point_summary(result):
+    linear = result.params["GDP_k"]
+    quadratic = result.params["GDP_sq"]
+    turning_point = -linear / (2 * quadratic)
+    quadratic_p_value = result.pvalues["GDP_sq"]
+    return (
+        "Implied two-way FE turning point (descriptive only): "
+        f"GDP/capita = ${turning_point * 1000:,.0f}. "
+        f"The quadratic term has p={quadratic_p_value:.3f}; because its confidence "
+        "interval includes zero, a finite turning point is not statistically identified."
+    )
+
 
 def run_analysis():
     print("Loading data...")
-    df = load_data()
-    
-    # 1. Preprocessing
-    # Ensure numeric
-    cols = ['GDP_per_capita', 'CO2_per_capita', 'Education_Tertiary', 'Rule_of_Law']
-    for c in cols:
-        df[c] = pd.to_numeric(df[c], errors='coerce')
-        
-    # Drop missing
-    print(f"Original shape: {df.shape}")
-    print("Column counts:")
-    print(df.count())
-    
-    # Relax dropna? 
-    # Try dropping only subset if needed, but for regression we need all.
-    df = df.dropna(subset=cols)
-    print(f"Shape after dropna: {df.shape}")
-    
-    if df.empty:
-        print("Error: No data available for analysis.")
-        return
+    data = load_data()
+    for column in MODEL_COLUMNS:
+        data[column] = pd.to_numeric(data[column], errors="coerce")
 
-    # Scale GDP to 'Thousands of dollars' for numerical stability and readability
-    # GDP usually 1000s to 50000+. 
-    df['GDP_k'] = df['GDP_per_capita'] / 1000.0
-    df['GDP_sq'] = df['GDP_k'] ** 2
-    
-    # Set Index for Panel Data
-    df = df.set_index(['country', 'year'])
-    
-    # 2. Variable Definitions
-    # Dependent: CO2
-    # Independent: GDP, GDP^2, RoL, Edu
-    # We add a constant
-    
-    exog_vars = ['GDP_k', 'GDP_sq', 'Rule_of_Law', 'Education_Tertiary']
-    
-    # Sample composition (post-dropna) — reported in README
-    def describe_sample(frame, label):
-        n_obs = len(frame)
-        n_entities = frame.index.get_level_values('country').nunique()
-        years = frame.index.get_level_values('year')
-        obs_per_entity = frame.groupby(level='country').size()
-        return (
-            f"{label}: N={n_obs}, entities={n_entities}, "
-            f"years={years.min()}-{years.max()}, "
-            f"avg obs/entity={obs_per_entity.mean():.1f}, "
-            f"min obs/entity={obs_per_entity.min()}, max={obs_per_entity.max()}"
+    print(f"Original shape: {data.shape}")
+    data = data.dropna(subset=MODEL_COLUMNS).copy()
+    print(f"Complete-case shape: {data.shape}")
+    if data.empty:
+        raise RuntimeError("No complete observations are available for analysis.")
+
+    data["GDP_k"] = data["GDP_per_capita"] / 1000.0
+    data["GDP_sq"] = data["GDP_k"] ** 2
+    data = data.set_index(["country", "year"]).sort_index()
+
+    samples = [("Full sample", data)]
+    samples.extend(
+        (group, data[data["Income_Group"] == group])
+        for group in sorted(data["Income_Group"].unique())
+    )
+
+    with open("regression_results.txt", "w", encoding="utf-8") as output:
+        output.write(
+            "All models use country fixed effects and country-clustered standard errors.\n"
+            "Each sample has an entity-only reference and a preferred specification "
+            "with year fixed effects.\n\n"
         )
+        for label, sample in samples:
+            if len(sample) < 10:
+                print(f"Skipping {label}: not enough data.")
+                continue
 
-    # 3. Full Model (Fixed Effects) — clustered SEs by entity
-    print("\n--- Model 1: All Countries (Fixed Effects, clustered SEs) ---")
-    exog = sm.add_constant(df[exog_vars])
-    mod = PanelOLS(df['CO2_per_capita'], exog, entity_effects=True)
-    res = mod.fit(cov_type='clustered', cluster_entity=True)
-    print(res)
+            sample_description = describe_sample(sample, label)
+            print(f"\n{sample_description}")
+            output.write(sample_description + "\n\n")
 
-    with open("regression_results.txt", "w") as f:
-        f.write("Standard errors clustered by entity (country) in all models.\n\n")
-        f.write(describe_sample(df, "Full sample") + "\n\n")
-        f.write("--- Model 1: All Countries ---\n")
-        f.write(str(res) + "\n\n")
+            entity_result = fit_model(sample, include_year_effects=False)
+            two_way_result = fit_model(sample, include_year_effects=True)
+            entity_table = format_result(entity_result)
+            two_way_table = format_result(two_way_result)
+            print(f"\n--- {label}: Entity FE (reference) ---\n{entity_table}")
+            print(f"\n--- {label}: Entity and year FE (preferred) ---\n{two_way_table}")
+            output.write(f"--- {label}: Entity FE (reference) ---\n{entity_table}\n\n")
+            output.write(
+                f"--- {label}: Entity and year FE (preferred) ---\n{two_way_table}\n\n"
+            )
 
-    # 4. Stratified Analysis
-    groups = df['Income_Group'].unique()
+            if label == LOW_MIDDLE_GROUP:
+                summary = turning_point_summary(two_way_result)
+                print(summary)
+                output.write(summary + "\n\n")
 
-    for g in groups:
-        print(f"\n--- Model for Group: {g} ---")
-        sub_df = df[df['Income_Group'] == g]
-
-        if sub_df.empty or len(sub_df) < 10:
-            print("Not enough data.")
-            continue
-
-        exog_sub = sm.add_constant(sub_df[exog_vars])
-        try:
-            mod_sub = PanelOLS(sub_df['CO2_per_capita'], exog_sub, entity_effects=True)
-            res_sub = mod_sub.fit(cov_type='clustered', cluster_entity=True)
-            print(res_sub)
-
-            with open("regression_results.txt", "a") as f:
-                f.write(describe_sample(sub_df, g) + "\n\n")
-                f.write(f"--- Model: {g} ---\n")
-                f.write(str(res_sub) + "\n\n")
-
-            # Turning point + delta-method 95% CI for LMIC
-            if g == 'Low-Middle Income':
-                b1 = res_sub.params['GDP_k']
-                b2 = res_sub.params['GDP_sq']
-                cov = res_sub.cov.loc[['GDP_k', 'GDP_sq'], ['GDP_k', 'GDP_sq']].values
-                tp = -b1 / (2 * b2)  # in thousands of dollars
-                # Jacobian of g = -b1 / (2*b2)
-                dg_db1 = -1.0 / (2 * b2)
-                dg_db2 = b1 / (2 * b2 ** 2)
-                J = np.array([dg_db1, dg_db2])
-                var_tp = float(J @ cov @ J.T)
-                se_tp = np.sqrt(var_tp)
-                lo, hi = tp - 1.96 * se_tp, tp + 1.96 * se_tp
-                tp_line = (
-                    f"LMIC turning point (delta method): "
-                    f"GDP/capita = ${tp*1000:,.0f} "
-                    f"(95% CI: ${lo*1000:,.0f} to ${hi*1000:,.0f}); "
-                    f"SE={se_tp*1000:,.0f}\n\n"
-                )
-                print(tp_line)
-                with open("regression_results.txt", "a") as f:
-                    f.write(tp_line)
-        except Exception as e:
-            print(f"Model failed for {g}: {e}")
-
-    # 5. Visualization (EKC)
-    # Scatter plot of GDP vs CO2
+    plot_data = data.reset_index()
     plt.figure(figsize=(10, 6))
-    sns.scatterplot(data=df.reset_index(), x='GDP_per_capita', y='CO2_per_capita', hue='Income_Group', alpha=0.6)
-    
-    # Fit line? 
-    # Just a visual aid
-    sns.regplot(data=df.reset_index(), x='GDP_per_capita', y='CO2_per_capita', scatter=False, order=2, color='black', label='Quadratic Fit')
-    
+    sns.scatterplot(
+        data=plot_data,
+        x="GDP_per_capita",
+        y="CO2_per_capita",
+        hue="Income_Group",
+        alpha=0.6,
+    )
+    sns.regplot(
+        data=plot_data,
+        x="GDP_per_capita",
+        y="CO2_per_capita",
+        scatter=False,
+        order=2,
+        color="black",
+        label="Pooled quadratic fit",
+    )
     plt.title("Environmental Kuznets Curve Analysis\nGDP vs CO2 per capita")
-    plt.xlabel("GDP per capita (Constant 2015 US$)")
-    plt.ylabel("CO2 Emissions (Metric tons per capita)")
+    plt.xlabel("GDP per capita (constant 2015 US$)")
+    plt.ylabel("CO2 emissions (metric tons per capita)")
     plt.legend()
     plt.grid(True)
+    plt.tight_layout()
     plt.savefig("ekc_plot.png")
+    plt.close()
     print("\nPlot saved to ekc_plot.png")
+
 
 if __name__ == "__main__":
     run_analysis()
