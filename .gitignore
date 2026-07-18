@@ -1,1 +1,5 @@
 CLAUDE.md
+AGENTS.md
+.venv/
+__pycache__/
+*.py[cod]
