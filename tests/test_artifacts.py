@@ -32,5 +32,5 @@ def test_canonical_csv_ignores_sub_precision_solver_noise(tmp_path):
     first = tmp_path / "first.csv"
     second = tmp_path / "second.csv"
     write_csv(pd.DataFrame({"estimate": [0.145408801529]}), first)
-    write_csv(pd.DataFrame({"estimate": [0.145408801528]}), second)
+    write_csv(pd.DataFrame({"estimate": [0.145408801101]}), second)
     assert first.read_bytes() == second.read_bytes()

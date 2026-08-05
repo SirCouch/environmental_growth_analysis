@@ -1,5 +1,5 @@
 <!-- GENERATED FILE: edit reports/README.template.md, then run `make report`. -->
-<!-- run-id: c29ac595e8f16acf -->
+<!-- run-id: 3962cd88a1c8c051 -->
 
 # Environmental Growth Analysis
 
@@ -91,7 +91,7 @@ On systems without Make, invoke the matching commands directly with `uv run envi
 
 ## Artifact index
 
-Run ID: `c29ac595e8f16acf`
+Run ID: `3962cd88a1c8c051`
 
 - [Run manifest](artifacts/current/run_manifest.json)
 - [Country universe](artifacts/current/country_universe.csv)
