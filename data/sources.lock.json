@@ -1,0 +1,99 @@
+{
+  "classification_snapshot_date": "2026-08-05",
+  "content_sha256": "f8168d6972656d3ee89500dde652b5941be4b19e99ac75ac8a761021f9ec0d35",
+  "created_at": "2026-08-05T22:59:46.702516Z",
+  "files": {
+    "CO2_per_capita": {
+      "path": "CO2_per_capita.csv",
+      "sha256": "acaf1b45daea435a7b877f0cee03d74110c662d217de161870a454b76e237df2"
+    },
+    "Education_Tertiary": {
+      "path": "Education_Tertiary.csv",
+      "sha256": "f195d3ac8cc8765b4085f33472217443e077fe1cd55d61d5a510d464361aadd8"
+    },
+    "GDP_per_capita": {
+      "path": "GDP_per_capita.csv",
+      "sha256": "5d0254e5ea43c3d3d176d5669f75a4486f5c370b89f7eb52f128caf5d432da2e"
+    },
+    "Rule_of_Law": {
+      "path": "Rule_of_Law.csv",
+      "sha256": "72598d2461ba4e5f6fe0843342f1c23221a453b1df8df12a1036fc957166e929"
+    },
+    "country_metadata": {
+      "path": "country_metadata.csv",
+      "sha256": "b4e9abca40636b9144958a02f184b072b8b558499cde3ccd7beea0ba113ccc80"
+    }
+  },
+  "schema_version": 1,
+  "snapshot_id": "snapshot-f8168d697265",
+  "snapshot_path": "data/snapshots/snapshot-f8168d697265",
+  "sources": {
+    "CO2_per_capita": {
+      "commit_resolution_endpoint": "https://api.github.com/repos/owid/co2-data/commits/master",
+      "commit_resolution_response_sha256": "fe21eac729a623dcfe598d764399934985abb6fa820e7cf6f232ad8562069030",
+      "configured_branch": "master",
+      "endpoint": "https://raw.githubusercontent.com/owid/co2-data/382ee6c662b0ece26e111f263b44c029afad7787/owid-co2-data.csv",
+      "etag": "W/\"0c0facb94cdf116f0882ddb296a5169350815eba208473b34c4753dd25540bf4\"",
+      "last_modified": "Tue, 02 Jun 2026 16:33:39 GMT",
+      "repository": "owid/co2-data",
+      "resolved_commit": "382ee6c662b0ece26e111f263b44c029afad7787",
+      "response_sha256": "7f78e2b218ce4bb8c538bbec04fdc9a7982e8d40bff972e650df603899edd5f6",
+      "retrieved_at": "2026-08-05T22:59:46.702516Z",
+      "upstream_path": "owid-co2-data.csv"
+    },
+    "Education_Tertiary": {
+      "api_version": "v2",
+      "endpoint": "https://api.worldbank.org/v2/en/indicator/SE.TER.ENRR",
+      "etag": null,
+      "indicator_id": "SE.TER.ENRR",
+      "last_modified": "Wed, 05 Aug 2026 09:12:51 GMT",
+      "request_parameters": {
+        "downloadformat": "csv"
+      },
+      "response_sha256": "a9c35cbab17b8d590cfcae7c3f20174af45cecf173552e5a4c643c9a1994d18e",
+      "retrieved_at": "2026-08-05T22:59:46.702516Z"
+    },
+    "GDP_per_capita": {
+      "api_version": "v2",
+      "endpoint": "https://api.worldbank.org/v2/en/indicator/NY.GDP.PCAP.KD",
+      "etag": null,
+      "indicator_id": "NY.GDP.PCAP.KD",
+      "last_modified": "Wed, 05 Aug 2026 13:50:03 GMT",
+      "request_parameters": {
+        "downloadformat": "csv"
+      },
+      "response_sha256": "7d50ce1dfe7a3783af23ba93a43ba5d20ffb9e363e6bd4e12dbf284f318d03e3",
+      "retrieved_at": "2026-08-05T22:59:46.702516Z"
+    },
+    "Rule_of_Law": {
+      "api_version": "v2",
+      "endpoint": "https://api.worldbank.org/v2/en/indicator/RL.EST",
+      "etag": null,
+      "indicator_id": "RL.EST",
+      "last_modified": "Wed, 05 Aug 2026 22:57:57 GMT",
+      "request_parameters": {
+        "downloadformat": "csv"
+      },
+      "response_sha256": "e3d7c952cb55f3ebd0f9f162818344511fd6fe402e567276398ea823ce3e1633",
+      "retrieved_at": "2026-08-05T22:59:46.702516Z"
+    },
+    "country_metadata": {
+      "api_version": "v2",
+      "classification_snapshot_date": "2026-08-05",
+      "endpoint": "https://api.worldbank.org/v2/country",
+      "pages": 1,
+      "request_parameters": {
+        "format": "json",
+        "per_page": 400
+      },
+      "response_headers_by_page": [
+        {
+          "etag": null,
+          "last_modified": "Tue, 04 Aug 2026 14:27:50 GMT"
+        }
+      ],
+      "response_sha256": "d29d57f8adf954c5e2a1520a02fb2c7b45575d8db3bd327a9dff47d66914231c",
+      "retrieved_at": "2026-08-05T22:59:46.702516Z"
+    }
+  }
+}

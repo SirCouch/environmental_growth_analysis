@@ -1,0 +1,255 @@
+{
+  "code": {
+    "Makefile": "bff6624bcd47b15a74b0b6fe253c83f98278c617b4f2a3766712318a8a32e314",
+    "config/analysis.yaml": "fcac94c2c3cba60c89479e24ff91876eb215329c04beb57049f4f387e4e13c92",
+    "pyproject.toml": "fc498e78a4896d5ad02b151c1954808562bfec6b25f39f1a37f8aca1a0f42e3d",
+    "reports/README.template.md": "f4ccf0cc123ae0d85e3e2adf5204fdde5e8a4965b5bcf7d1040381a9b3dbb9cf",
+    "src/environmental_growth/__init__.py": "b1894cc8b48b5fb0c96afe9af58e7cf9f0383bbd40c21194a5be4d194abf1c18",
+    "src/environmental_growth/__main__.py": "7d6008e629aa5d2f5e9ac4fac71123c73bba1c53215acddf7032d4534a81a91e",
+    "src/environmental_growth/artifacts.py": "10e688cb2acc81181610fb0688cebbbd44e7c8730faf0d887af6eeec1463d1fe",
+    "src/environmental_growth/config.py": "d3821d0f14084d84a8536109e145491f4c101a0607296976d1c88ac9e088c033",
+    "src/environmental_growth/diagnostics.py": "5ca726beebdaae178aa7e427cc2924b4811a899b2e54b026da07e23e22bd2c91",
+    "src/environmental_growth/estimands.py": "a67b49b1aa8a248895047ce2b7c0786ffd6ff8b9f61f575d459ce3cd44321fa4",
+    "src/environmental_growth/models.py": "d80efe6213490cdf3598c90b8bd87657b1403409c682c2ed1247a1bac1bd6da0",
+    "src/environmental_growth/panel.py": "7cde772a25dc881e7da0dc394e7e236eddb0f5985eb156801e08cd6d0b5448ef",
+    "src/environmental_growth/pipeline.py": "38777df92e38710aae6358817d94595faf4218d299d2d792bfeade3ae2cdda2c",
+    "src/environmental_growth/report.py": "d672bfb3855613d60e7f444ca4b825b8b36141172dfadfd93d347ce1a8674ff8",
+    "src/environmental_growth/selection.py": "56e8d6e0efb80f455d1c1efc75fa610a55840c20f647a5e844da6f30b478c9d5",
+    "src/environmental_growth/sources.py": "3b497e503b6183b067063433ebcad9728678abe38e420c1578ac0b429b9bee27",
+    "uv.lock": "5218d150d694bced1254d61476f707466f40abbd57aca816e0656afa5f3c0436"
+  },
+  "code_sha256": "5f2e34a7fbae506cecd92134364f53e368d173ba5361b00b7580e223e0350a24",
+  "environment": {
+    "implementation": "CPython",
+    "packages": {
+      "PyYAML": "6.0.3",
+      "linearmodels": "7.0",
+      "matplotlib": "3.11.1",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "requests": "2.34.2",
+      "scipy": "1.17.1",
+      "seaborn": "0.13.2",
+      "statsmodels": "0.14.6",
+      "tabulate": "0.10.0"
+    },
+    "python": "3.11.5"
+  },
+  "environment_sha256": "b3fc68552ad352a4c357b3491ac2100557a6f88d6f12ecb3ebd6f570289b2719",
+  "outputs": {
+    "coefficients.csv": {
+      "bytes": 5123,
+      "canonical": true,
+      "sha256": "b7ba8e3f2ecacec3830e398754d7246462cfb00edf7bedfa65a7878a1fbf74d0"
+    },
+    "country_coverage.csv": {
+      "bytes": 64558,
+      "canonical": true,
+      "sha256": "d62d118e14fea831926e4d6d37b1fe687834c3cfca0178bdf05ba4cbbc7abd92"
+    },
+    "country_universe.csv": {
+      "bytes": 37082,
+      "canonical": true,
+      "sha256": "420eb445a99596ee12aec197039d7643ebf1a5510736b474b1fa1530a5a49d2a"
+    },
+    "figures/ekc_plot.png": {
+      "bytes": 114251,
+      "canonical": true,
+      "sha256": "ad5bd3eed67a345d66e845edd6450417f93233e10e71c7966ba05af0057902fe"
+    },
+    "missingness_by_variable.csv": {
+      "bytes": 825,
+      "canonical": true,
+      "sha256": "fcb630a7e33d44debbff26e62acafc6c76e62cbe715852ece58196c51636ce18"
+    },
+    "missingness_patterns.csv": {
+      "bytes": 1573,
+      "canonical": true,
+      "sha256": "92b9030bbe590908c08b8955cbecdfd10f5d1d5f1b7137a6d08bab2cada7897f"
+    },
+    "model_diagnostics.csv": {
+      "bytes": 1852,
+      "canonical": true,
+      "sha256": "23cfc7290b1591f45880642c805e5246eecd10607fb9dd68410717bd82bc8634"
+    },
+    "model_summaries.txt": {
+      "bytes": 13672,
+      "canonical": false,
+      "sha256": "b1a0b9f3800128a41823c650f9bf474eea2d097c2dab00f7cb326c50a5fb486d"
+    },
+    "results_report.md": {
+      "bytes": 5827,
+      "canonical": true,
+      "sha256": "8a8e954b0d6ed6a7641752e9b5572d80624a1672257737938ad6d4844f3937a3"
+    },
+    "sample_composition.csv": {
+      "bytes": 328,
+      "canonical": true,
+      "sha256": "807c66d7f6db80116b3daa675a670435194fb1159b77fd8583cbe3ea55f2ce3f"
+    },
+    "sample_flow.csv": {
+      "bytes": 297,
+      "canonical": true,
+      "sha256": "0dc937b626ec5a8ada75a2a716a07b5130b26a74efb007b6c6aaafa8a080e305"
+    },
+    "tables/coefficients.md": {
+      "bytes": 7552,
+      "canonical": true,
+      "sha256": "036286b762135ddfb388056c5c3cab294e211de477670bafe2775e7956e8857e"
+    },
+    "tables/country_coverage.md": {
+      "bytes": 90666,
+      "canonical": true,
+      "sha256": "a1adae22ff4af473196a3d5de29a032c5b251258e5fb475767017128b9aff402"
+    },
+    "tables/country_universe.md": {
+      "bytes": 101871,
+      "canonical": true,
+      "sha256": "cdd7cf5e3a09e779cd0c7c7d7e62c3257a5302905b15605e6b09c20afe2743f0"
+    },
+    "tables/missingness_by_variable.md": {
+      "bytes": 2128,
+      "canonical": true,
+      "sha256": "09f6743172d3fb9c6979731e747ba8efa2147114e8fbc2a14656f3913ab31e87"
+    },
+    "tables/missingness_patterns.md": {
+      "bytes": 3384,
+      "canonical": true,
+      "sha256": "4892e33aab983d5079b1cc54f5988ac43785dcbd49a30288fb13c8fc15480afa"
+    },
+    "tables/model_diagnostics.md": {
+      "bytes": 3560,
+      "canonical": true,
+      "sha256": "f178b3a2bc7b474ab1b1f013713342ef31fb115c526bef999c97e7fc0839d3e2"
+    },
+    "tables/sample_composition.md": {
+      "bytes": 1035,
+      "canonical": true,
+      "sha256": "61791d5488eac57e4f4e1293068c998cb4eefff459dc013af2a26078ac08d132"
+    },
+    "tables/sample_flow.md": {
+      "bytes": 790,
+      "canonical": true,
+      "sha256": "fb93dbdf0a52a9b4c8bb3d94d5a656fc9bbd534a2b61abc7c6f4705f508201d0"
+    },
+    "tables/turning_points.md": {
+      "bytes": 1239,
+      "canonical": true,
+      "sha256": "de2e5f5f614e1513bacce80fba21489fa078cb0dfc6de44da7441bf7bad341c6"
+    },
+    "turning_points.csv": {
+      "bytes": 557,
+      "canonical": true,
+      "sha256": "98c35333f8c98d66d7f3bb92823c0c4f0c29fb843abb29ec6464e47051873537"
+    }
+  },
+  "resolved_config": {
+    "confidence_level": 0.95,
+    "country_universe": {
+      "classification_mode": "current_snapshot",
+      "exclude_aggregates": true,
+      "income_codes": [
+        "HIC",
+        "LIC",
+        "LMC",
+        "UMC"
+      ],
+      "income_groups": {
+        "HIC": "High Income",
+        "LIC": "Low and Middle Income",
+        "LMC": "Low and Middle Income",
+        "UMC": "Low and Middle Income"
+      }
+    },
+    "coverage": {
+      "minimum_complete_years": 15,
+      "required_variables": [
+        "GDP_per_capita",
+        "CO2_per_capita",
+        "Education_Tertiary",
+        "Rule_of_Law"
+      ]
+    },
+    "model": {
+      "covariance_type": "clustered_entity",
+      "dependent_variable": "CO2_per_capita",
+      "preferred_model_id": "entity_year_fe",
+      "regressors": [
+        "GDP_k",
+        "GDP_sq",
+        "Rule_of_Law",
+        "Education_Tertiary"
+      ],
+      "specifications": [
+        {
+          "entity_effects": true,
+          "id": "entity_fe",
+          "label": "Entity fixed effects",
+          "year_effects": false
+        },
+        {
+          "entity_effects": true,
+          "id": "entity_year_fe",
+          "label": "Entity and year fixed effects",
+          "year_effects": true
+        }
+      ]
+    },
+    "period": {
+      "end_year": 2020,
+      "start_year": 1990
+    },
+    "samples": [
+      {
+        "id": "full_sample",
+        "label": "Full sample"
+      },
+      {
+        "id": "high_income",
+        "income_groups": [
+          "High Income"
+        ],
+        "label": "High income"
+      },
+      {
+        "id": "low_middle_income",
+        "income_groups": [
+          "Low and Middle Income"
+        ],
+        "label": "Low and middle income"
+      }
+    ],
+    "sources": {
+      "owid": {
+        "branch": "master",
+        "output_column": "CO2_per_capita",
+        "path": "owid-co2-data.csv",
+        "repository": "owid/co2-data",
+        "source_column": "co2_per_capita"
+      },
+      "world_bank": {
+        "api_base": "https://api.worldbank.org/v2",
+        "indicators": {
+          "NY.GDP.PCAP.KD": "GDP_per_capita",
+          "RL.EST": "Rule_of_Law",
+          "SE.TER.ENRR": "Education_Tertiary"
+        }
+      }
+    },
+    "turning_point": {
+      "linear_term": "GDP_k",
+      "model_id": "entity_year_fe",
+      "quadratic_term": "GDP_sq",
+      "sample_id": "low_middle_income",
+      "scale": 1000
+    }
+  },
+  "resolved_config_sha256": "05901cd02f64da064a115e50c575c5b64ab1ea2619b2c33565c24a40192ed477",
+  "run_id": "88c5304f22cec6ea",
+  "schema_version": 1,
+  "selected_country_set_sha256": "17f5fefb766f651dd01b0ddf2b6b7706ebf68c7558c8e644fd152cda67e82ce8",
+  "source_lock_sha256": "6f0bfddea29e39f5d8de6f1020b5c372b4977d1d17b6a4a42ac9a210d1325608",
+  "source_snapshot_created_at": "2026-08-05T22:59:46.702516Z",
+  "source_snapshot_id": "snapshot-f8168d697265",
+  "source_snapshot_sha256": "f8168d6972656d3ee89500dde652b5941be4b19e99ac75ac8a761021f9ec0d35"
+}

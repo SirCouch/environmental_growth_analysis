@@ -1,0 +1,2 @@
+sample_id,model_id,confidence_level,estimate_usd,delta_standard_error_usd,delta_ci_lower_usd,delta_ci_upper_usd,linear_estimate,quadratic_estimate,quadratic_ci_lower,quadratic_ci_upper,quadratic_ci_contains_zero,inverted_u_signs,observed_gdp_min_usd,observed_gdp_max_usd,within_observed_gdp_support,identification_status
+low_middle_income,entity_year_fe,0.95,11511.6214482,2127.06766964,7342.64542301,15680.5974733,1.08444091522,-0.0471020055733,-0.104404603983,0.0102005928365,True,True,227.198486695,14040.6189124,True,finite_turning_point_not_identified

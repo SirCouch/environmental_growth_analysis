@@ -1,0 +1,296 @@
+country,country_name,income_level_code,income_level_name,region_code,region_name,is_aggregate
+ABW,Aruba,HIC,High income,LCN,Latin America & Caribbean ,False
+AFE,Africa Eastern and Southern,NA,Aggregates,NA,Aggregates,True
+AFG,Afghanistan,LIC,Low income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+AFR,Africa,NA,Aggregates,NA,Aggregates,True
+AFW,Africa Western and Central,NA,Aggregates,NA,Aggregates,True
+AGO,Angola,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+ALB,Albania,UMC,Upper middle income,ECS,Europe & Central Asia,False
+AND,Andorra,HIC,High income,ECS,Europe & Central Asia,False
+ARB,Arab World,NA,Aggregates,NA,Aggregates,True
+ARE,United Arab Emirates,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+ARG,Argentina,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+ARM,Armenia,UMC,Upper middle income,ECS,Europe & Central Asia,False
+ASM,American Samoa,HIC,High income,EAS,East Asia & Pacific,False
+ATG,Antigua and Barbuda,HIC,High income,LCN,Latin America & Caribbean ,False
+AUS,Australia,HIC,High income,EAS,East Asia & Pacific,False
+AUT,Austria,HIC,High income,ECS,Europe & Central Asia,False
+AZE,Azerbaijan,UMC,Upper middle income,ECS,Europe & Central Asia,False
+BDI,Burundi,LIC,Low income,SSF,Sub-Saharan Africa ,False
+BEA,East Asia & Pacific (IBRD-only countries),NA,Aggregates,NA,Aggregates,True
+BEC,Europe & Central Asia (IBRD-only countries),NA,Aggregates,NA,Aggregates,True
+BEL,Belgium,HIC,High income,ECS,Europe & Central Asia,False
+BEN,Benin,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+BFA,Burkina Faso,LIC,Low income,SSF,Sub-Saharan Africa ,False
+BGD,Bangladesh,LMC,Lower middle income,SAS,South Asia,False
+BGR,Bulgaria,HIC,High income,ECS,Europe & Central Asia,False
+BHI,IBRD countries classified as high income,NA,Aggregates,NA,Aggregates,True
+BHR,Bahrain,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+BHS,"Bahamas, The",HIC,High income,LCN,Latin America & Caribbean ,False
+BIH,Bosnia and Herzegovina,UMC,Upper middle income,ECS,Europe & Central Asia,False
+BLA,Latin America & the Caribbean (IBRD-only countries),NA,Aggregates,NA,Aggregates,True
+BLR,Belarus,UMC,Upper middle income,ECS,Europe & Central Asia,False
+BLZ,Belize,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+BMN,"Middle East, North Africa, Afghanistan & Pakistan (IBRD only)",NA,Aggregates,NA,Aggregates,True
+BMU,Bermuda,HIC,High income,NAC,North America,False
+BOL,Bolivia,LMC,Lower middle income,LCN,Latin America & Caribbean ,False
+BRA,Brazil,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+BRB,Barbados,HIC,High income,LCN,Latin America & Caribbean ,False
+BRN,Brunei Darussalam,HIC,High income,EAS,East Asia & Pacific,False
+BSS,Sub-Saharan Africa (IBRD-only countries),NA,Aggregates,NA,Aggregates,True
+BTN,Bhutan,LMC,Lower middle income,SAS,South Asia,False
+BWA,Botswana,UMC,Upper middle income,SSF,Sub-Saharan Africa ,False
+CAA,Sub-Saharan Africa (IFC classification),NA,Aggregates,NA,Aggregates,True
+CAF,Central African Republic,LIC,Low income,SSF,Sub-Saharan Africa ,False
+CAN,Canada,HIC,High income,NAC,North America,False
+CEA,East Asia and the Pacific (IFC classification),NA,Aggregates,NA,Aggregates,True
+CEB,Central Europe and the Baltics,NA,Aggregates,NA,Aggregates,True
+CEU,Europe and Central Asia (IFC classification),NA,Aggregates,NA,Aggregates,True
+CHE,Switzerland,HIC,High income,ECS,Europe & Central Asia,False
+CHI,Channel Islands,HIC,High income,ECS,Europe & Central Asia,False
+CHL,Chile,HIC,High income,LCN,Latin America & Caribbean ,False
+CHN,China,UMC,Upper middle income,EAS,East Asia & Pacific,False
+CIV,Cote d'Ivoire,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+CLA,Latin America and the Caribbean (IFC classification),NA,Aggregates,NA,Aggregates,True
+CME,Middle East and North Africa (IFC classification),NA,Aggregates,NA,Aggregates,True
+CMR,Cameroon,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+COD,"Congo, Dem. Rep.",LIC,Low income,SSF,Sub-Saharan Africa ,False
+COG,"Congo, Rep.",LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+COL,Colombia,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+COM,Comoros,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+CPV,Cabo Verde,UMC,Upper middle income,SSF,Sub-Saharan Africa ,False
+CRI,Costa Rica,HIC,High income,LCN,Latin America & Caribbean ,False
+CSA,South Asia (IFC classification),NA,Aggregates,NA,Aggregates,True
+CSS,Caribbean small states,NA,Aggregates,NA,Aggregates,True
+CUB,Cuba,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+CUW,Curacao,HIC,High income,LCN,Latin America & Caribbean ,False
+CYM,Cayman Islands,HIC,High income,LCN,Latin America & Caribbean ,False
+CYP,Cyprus,HIC,High income,ECS,Europe & Central Asia,False
+CZE,Czechia,HIC,High income,ECS,Europe & Central Asia,False
+DEA,East Asia & Pacific (IDA-eligible countries),NA,Aggregates,NA,Aggregates,True
+DEC,Europe & Central Asia (IDA-eligible countries),NA,Aggregates,NA,Aggregates,True
+DEU,Germany,HIC,High income,ECS,Europe & Central Asia,False
+DJI,Djibouti,LMC,Lower middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+DLA,Latin America & the Caribbean (IDA-eligible countries),NA,Aggregates,NA,Aggregates,True
+DMA,Dominica,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+DMN,"Middle East, North Africa, Afghanistan & Pakistan (IDA total)",NA,Aggregates,NA,Aggregates,True
+DNK,Denmark,HIC,High income,ECS,Europe & Central Asia,False
+DNS,IDA countries in Sub-Saharan Africa not classified as fragile situations ,NA,Aggregates,NA,Aggregates,True
+DOM,Dominican Republic,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+DSA,South Asia (IDA-eligible countries),NA,Aggregates,NA,Aggregates,True
+DSF,IDA countries in Sub-Saharan Africa classified as fragile situations ,NA,Aggregates,NA,Aggregates,True
+DSS,Sub-Saharan Africa (IDA-eligible countries),NA,Aggregates,NA,Aggregates,True
+DZA,Algeria,UMC,Upper middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+EAP,East Asia & Pacific (excluding high income),NA,Aggregates,NA,Aggregates,True
+EAR,Early-demographic dividend,NA,Aggregates,NA,Aggregates,True
+EAS,East Asia & Pacific,NA,Aggregates,NA,Aggregates,True
+ECA,Europe & Central Asia (excluding high income),NA,Aggregates,NA,Aggregates,True
+ECS,Europe & Central Asia,NA,Aggregates,NA,Aggregates,True
+ECU,Ecuador,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+EGY,"Egypt, Arab Rep.",LMC,Lower middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+EMU,Euro area,NA,Aggregates,NA,Aggregates,True
+ERI,Eritrea,LIC,Low income,SSF,Sub-Saharan Africa ,False
+ESP,Spain,HIC,High income,ECS,Europe & Central Asia,False
+EST,Estonia,HIC,High income,ECS,Europe & Central Asia,False
+ETH,Ethiopia,LIC,Low income,SSF,Sub-Saharan Africa ,False
+EUU,European Union,NA,Aggregates,NA,Aggregates,True
+FIN,Finland,HIC,High income,ECS,Europe & Central Asia,False
+FJI,Fiji,UMC,Upper middle income,EAS,East Asia & Pacific,False
+FRA,France,HIC,High income,ECS,Europe & Central Asia,False
+FRO,Faroe Islands,HIC,High income,ECS,Europe & Central Asia,False
+FSM,"Micronesia, Fed. Sts.",UMC,Upper middle income,EAS,East Asia & Pacific,False
+FXS,"IDA countries classified as fragile situations, excluding Sub-Saharan Africa",NA,Aggregates,NA,Aggregates,True
+GAB,Gabon,UMC,Upper middle income,SSF,Sub-Saharan Africa ,False
+GBR,United Kingdom,HIC,High income,ECS,Europe & Central Asia,False
+GEO,Georgia,UMC,Upper middle income,ECS,Europe & Central Asia,False
+GHA,Ghana,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+GIB,Gibraltar,HIC,High income,ECS,Europe & Central Asia,False
+GIN,Guinea,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+GMB,"Gambia, The",LIC,Low income,SSF,Sub-Saharan Africa ,False
+GNB,Guinea-Bissau,LIC,Low income,SSF,Sub-Saharan Africa ,False
+GNQ,Equatorial Guinea,UMC,Upper middle income,SSF,Sub-Saharan Africa ,False
+GRC,Greece,HIC,High income,ECS,Europe & Central Asia,False
+GRD,Grenada,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+GRL,Greenland,HIC,High income,ECS,Europe & Central Asia,False
+GTM,Guatemala,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+GUM,Guam,HIC,High income,EAS,East Asia & Pacific,False
+GUY,Guyana,HIC,High income,LCN,Latin America & Caribbean ,False
+HIC,High income,NA,Aggregates,NA,Aggregates,True
+HKG,"Hong Kong SAR, China",HIC,High income,EAS,East Asia & Pacific,False
+HND,Honduras,LMC,Lower middle income,LCN,Latin America & Caribbean ,False
+HPC,Heavily indebted poor countries (HIPC),NA,Aggregates,NA,Aggregates,True
+HRV,Croatia,HIC,High income,ECS,Europe & Central Asia,False
+HTI,Haiti,LMC,Lower middle income,LCN,Latin America & Caribbean ,False
+HUN,Hungary,HIC,High income,ECS,Europe & Central Asia,False
+IBB,"IBRD, including blend",NA,Aggregates,NA,Aggregates,True
+IBD,IBRD only,NA,Aggregates,NA,Aggregates,True
+IBT,IDA & IBRD total,NA,Aggregates,NA,Aggregates,True
+IDA,IDA total,NA,Aggregates,NA,Aggregates,True
+IDB,IDA blend,NA,Aggregates,NA,Aggregates,True
+IDN,Indonesia,UMC,Upper middle income,EAS,East Asia & Pacific,False
+IDX,IDA only,NA,Aggregates,NA,Aggregates,True
+IMN,Isle of Man,HIC,High income,ECS,Europe & Central Asia,False
+IND,India,LMC,Lower middle income,SAS,South Asia,False
+INX,Not classified,NA,Aggregates,NA,Aggregates,True
+IRL,Ireland,HIC,High income,ECS,Europe & Central Asia,False
+IRN,"Iran, Islamic Rep.",UMC,Upper middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+IRQ,Iraq,UMC,Upper middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+ISL,Iceland,HIC,High income,ECS,Europe & Central Asia,False
+ISR,Israel,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+ITA,Italy,HIC,High income,ECS,Europe & Central Asia,False
+JAM,Jamaica,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+JOR,Jordan,UMC,Upper middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+JPN,Japan,HIC,High income,EAS,East Asia & Pacific,False
+KAZ,Kazakhstan,UMC,Upper middle income,ECS,Europe & Central Asia,False
+KEN,Kenya,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+KGZ,Kyrgyz Republic,LMC,Lower middle income,ECS,Europe & Central Asia,False
+KHM,Cambodia,LMC,Lower middle income,EAS,East Asia & Pacific,False
+KIR,Kiribati,LMC,Lower middle income,EAS,East Asia & Pacific,False
+KNA,St. Kitts and Nevis,HIC,High income,LCN,Latin America & Caribbean ,False
+KOR,"Korea, Rep.",HIC,High income,EAS,East Asia & Pacific,False
+KWT,Kuwait,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+LAC,Latin America & Caribbean (excluding high income),NA,Aggregates,NA,Aggregates,True
+LAO,Lao PDR,LMC,Lower middle income,EAS,East Asia & Pacific,False
+LBN,Lebanon,LMC,Lower middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+LBR,Liberia,LIC,Low income,SSF,Sub-Saharan Africa ,False
+LBY,Libya,UMC,Upper middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+LCA,St. Lucia,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+LCN,Latin America & Caribbean ,NA,Aggregates,NA,Aggregates,True
+LDC,Least developed countries: UN classification,NA,Aggregates,NA,Aggregates,True
+LIC,Low income,NA,Aggregates,NA,Aggregates,True
+LIE,Liechtenstein,HIC,High income,ECS,Europe & Central Asia,False
+LKA,Sri Lanka,UMC,Upper middle income,SAS,South Asia,False
+LMC,Lower middle income,NA,Aggregates,NA,Aggregates,True
+LMY,Low & middle income,NA,Aggregates,NA,Aggregates,True
+LSO,Lesotho,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+LTE,Late-demographic dividend,NA,Aggregates,NA,Aggregates,True
+LTU,Lithuania,HIC,High income,ECS,Europe & Central Asia,False
+LUX,Luxembourg,HIC,High income,ECS,Europe & Central Asia,False
+LVA,Latvia,HIC,High income,ECS,Europe & Central Asia,False
+MAC,"Macao SAR, China",HIC,High income,EAS,East Asia & Pacific,False
+MAF,St. Martin (French part),HIC,High income,LCN,Latin America & Caribbean ,False
+MAR,Morocco,LMC,Lower middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+MCO,Monaco,HIC,High income,ECS,Europe & Central Asia,False
+MDA,Moldova,UMC,Upper middle income,ECS,Europe & Central Asia,False
+MDE,Middle East (developing only),NA,Aggregates,NA,Aggregates,True
+MDG,Madagascar,LIC,Low income,SSF,Sub-Saharan Africa ,False
+MDV,Maldives,UMC,Upper middle income,SAS,South Asia,False
+MEA,"Middle East, North Africa, Afghanistan & Pakistan",NA,Aggregates,NA,Aggregates,True
+MEX,Mexico,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+MHL,Marshall Islands,UMC,Upper middle income,EAS,East Asia & Pacific,False
+MIC,Middle income,NA,Aggregates,NA,Aggregates,True
+MKD,North Macedonia,UMC,Upper middle income,ECS,Europe & Central Asia,False
+MLI,Mali,LIC,Low income,SSF,Sub-Saharan Africa ,False
+MLT,Malta,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+MMR,Myanmar,LMC,Lower middle income,EAS,East Asia & Pacific,False
+MNA,"Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",NA,Aggregates,NA,Aggregates,True
+MNE,Montenegro,UMC,Upper middle income,ECS,Europe & Central Asia,False
+MNG,Mongolia,UMC,Upper middle income,EAS,East Asia & Pacific,False
+MNP,Northern Mariana Islands,HIC,High income,EAS,East Asia & Pacific,False
+MOZ,Mozambique,LIC,Low income,SSF,Sub-Saharan Africa ,False
+MRT,Mauritania,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+MUS,Mauritius,UMC,Upper middle income,SSF,Sub-Saharan Africa ,False
+MWI,Malawi,LIC,Low income,SSF,Sub-Saharan Africa ,False
+MYS,Malaysia,UMC,Upper middle income,EAS,East Asia & Pacific,False
+NAC,North America,NA,Aggregates,NA,Aggregates,True
+NAF,North Africa,NA,Aggregates,NA,Aggregates,True
+NAM,Namibia,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+NCL,New Caledonia,HIC,High income,EAS,East Asia & Pacific,False
+NER,Niger,LIC,Low income,SSF,Sub-Saharan Africa ,False
+NGA,Nigeria,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+NIC,Nicaragua,LMC,Lower middle income,LCN,Latin America & Caribbean ,False
+NLD,Netherlands,HIC,High income,ECS,Europe & Central Asia,False
+NOR,Norway,HIC,High income,ECS,Europe & Central Asia,False
+NPL,Nepal,LMC,Lower middle income,SAS,South Asia,False
+NRS,Non-resource rich Sub-Saharan Africa countries,NA,Aggregates,NA,Aggregates,True
+NRU,Naoero,HIC,High income,EAS,East Asia & Pacific,False
+NXS,"IDA countries not classified as fragile situations, excluding Sub-Saharan Africa",NA,Aggregates,NA,Aggregates,True
+NZL,New Zealand,HIC,High income,EAS,East Asia & Pacific,False
+OED,OECD members,NA,Aggregates,NA,Aggregates,True
+OMN,Oman,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+OSS,Other small states,NA,Aggregates,NA,Aggregates,True
+PAK,Pakistan,LMC,Lower middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+PAN,Panama,HIC,High income,LCN,Latin America & Caribbean ,False
+PER,Peru,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+PHL,Philippines,UMC,Upper middle income,EAS,East Asia & Pacific,False
+PLW,Palau,HIC,High income,EAS,East Asia & Pacific,False
+PNG,Papua New Guinea,LMC,Lower middle income,EAS,East Asia & Pacific,False
+POL,Poland,HIC,High income,ECS,Europe & Central Asia,False
+PRE,Pre-demographic dividend,NA,Aggregates,NA,Aggregates,True
+PRI,Puerto Rico (US),HIC,High income,LCN,Latin America & Caribbean ,False
+PRK,"Korea, Dem. People's Rep.",LIC,Low income,EAS,East Asia & Pacific,False
+PRT,Portugal,HIC,High income,ECS,Europe & Central Asia,False
+PRY,Paraguay,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+PSE,West Bank and Gaza,LMC,Lower middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+PSS,Pacific island small states,NA,Aggregates,NA,Aggregates,True
+PST,Post-demographic dividend,NA,Aggregates,NA,Aggregates,True
+PYF,French Polynesia,HIC,High income,EAS,East Asia & Pacific,False
+QAT,Qatar,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+ROU,Romania,HIC,High income,ECS,Europe & Central Asia,False
+RRS,Resource rich Sub-Saharan Africa countries,NA,Aggregates,NA,Aggregates,True
+RUS,Russian Federation,HIC,High income,ECS,Europe & Central Asia,False
+RWA,Rwanda,LIC,Low income,SSF,Sub-Saharan Africa ,False
+SAS,South Asia,NA,Aggregates,NA,Aggregates,True
+SAU,Saudi Arabia,HIC,High income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+SDN,Sudan,LIC,Low income,SSF,Sub-Saharan Africa ,False
+SEN,Senegal,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+SGP,Singapore,HIC,High income,EAS,East Asia & Pacific,False
+SLB,Solomon Islands,LMC,Lower middle income,EAS,East Asia & Pacific,False
+SLE,Sierra Leone,LIC,Low income,SSF,Sub-Saharan Africa ,False
+SLV,El Salvador,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+SMR,San Marino,HIC,High income,ECS,Europe & Central Asia,False
+SOM,"Somalia, Fed. Rep.",LIC,Low income,SSF,Sub-Saharan Africa ,False
+SRB,Serbia,UMC,Upper middle income,ECS,Europe & Central Asia,False
+SSA,Sub-Saharan Africa (excluding high income),NA,Aggregates,NA,Aggregates,True
+SSD,South Sudan,LIC,Low income,SSF,Sub-Saharan Africa ,False
+SSF,Sub-Saharan Africa ,NA,Aggregates,NA,Aggregates,True
+SST,Small states,NA,Aggregates,NA,Aggregates,True
+STP,Sao Tome and Principe,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+SUR,Suriname,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+SVK,Slovak Republic,HIC,High income,ECS,Europe & Central Asia,False
+SVN,Slovenia,HIC,High income,ECS,Europe & Central Asia,False
+SWE,Sweden,HIC,High income,ECS,Europe & Central Asia,False
+SWZ,Eswatini,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+SXM,Sint Maarten (Dutch part),HIC,High income,LCN,Latin America & Caribbean ,False
+SXZ,Sub-Saharan Africa excluding South Africa,NA,Aggregates,NA,Aggregates,True
+SYC,Seychelles,HIC,High income,SSF,Sub-Saharan Africa ,False
+SYR,Syrian Arab Republic,LIC,Low income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+TCA,Turks and Caicos Islands,HIC,High income,LCN,Latin America & Caribbean ,False
+TCD,Chad,LIC,Low income,SSF,Sub-Saharan Africa ,False
+TEA,East Asia & Pacific (IDA & IBRD countries),NA,Aggregates,NA,Aggregates,True
+TEC,Europe & Central Asia (IDA & IBRD countries),NA,Aggregates,NA,Aggregates,True
+TGO,Togo,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+THA,Thailand,UMC,Upper middle income,EAS,East Asia & Pacific,False
+TJK,Tajikistan,LMC,Lower middle income,ECS,Europe & Central Asia,False
+TKM,Turkmenistan,UMC,Upper middle income,ECS,Europe & Central Asia,False
+TLA,Latin America & the Caribbean (IDA & IBRD countries),NA,Aggregates,NA,Aggregates,True
+TLS,Timor-Leste,LMC,Lower middle income,EAS,East Asia & Pacific,False
+TMN,"Middle East, North Africa, Afghanistan & Pakistan (IDA & IBRD)",NA,Aggregates,NA,Aggregates,True
+TON,Tonga,UMC,Upper middle income,EAS,East Asia & Pacific,False
+TSA,South Asia (IDA & IBRD),NA,Aggregates,NA,Aggregates,True
+TSS,Sub-Saharan Africa (IDA & IBRD countries),NA,Aggregates,NA,Aggregates,True
+TTO,Trinidad and Tobago,HIC,High income,LCN,Latin America & Caribbean ,False
+TUN,Tunisia,LMC,Lower middle income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+TUR,Turkiye,UMC,Upper middle income,ECS,Europe & Central Asia,False
+TUV,Tuvalu,UMC,Upper middle income,EAS,East Asia & Pacific,False
+TZA,Tanzania,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+UGA,Uganda,LIC,Low income,SSF,Sub-Saharan Africa ,False
+UKR,Ukraine,UMC,Upper middle income,ECS,Europe & Central Asia,False
+UMC,Upper middle income,NA,Aggregates,NA,Aggregates,True
+URY,Uruguay,HIC,High income,LCN,Latin America & Caribbean ,False
+USA,United States,HIC,High income,NAC,North America,False
+UZB,Uzbekistan,LMC,Lower middle income,ECS,Europe & Central Asia,False
+VCT,St. Vincent and the Grenadines,UMC,Upper middle income,LCN,Latin America & Caribbean ,False
+VEN,"Venezuela, RB",LMC,Lower middle income,LCN,Latin America & Caribbean ,False
+VGB,British Virgin Islands,HIC,High income,LCN,Latin America & Caribbean ,False
+VIR,Virgin Islands (U.S.),HIC,High income,LCN,Latin America & Caribbean ,False
+VNM,Viet Nam,UMC,Upper middle income,EAS,East Asia & Pacific,False
+VUT,Vanuatu,LMC,Lower middle income,EAS,East Asia & Pacific,False
+WLD,World,NA,Aggregates,NA,Aggregates,True
+WSM,Samoa,UMC,Upper middle income,EAS,East Asia & Pacific,False
+XKX,Kosovo,UMC,Upper middle income,ECS,Europe & Central Asia,False
+XZN,Sub-Saharan Africa excluding South Africa and Nigeria,NA,Aggregates,NA,Aggregates,True
+YEM,"Yemen, Rep.",LIC,Low income,MEA,"Middle East, North Africa, Afghanistan & Pakistan",False
+ZAF,South Africa,UMC,Upper middle income,SSF,Sub-Saharan Africa ,False
+ZMB,Zambia,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False
+ZWE,Zimbabwe,LMC,Lower middle income,SSF,Sub-Saharan Africa ,False

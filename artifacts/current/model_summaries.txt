@@ -1,16 +1,12 @@
-All models use country fixed effects and country-clustered standard errors.
-Each sample has an entity-only reference and a preferred specification with year fixed effects.
-
-Full sample: N=2009, countries=104, years=1996-2020, avg obs/country=19.3, min=15, max=22
-
---- Full sample: Entity FE (reference) ---
+Full sample | Entity fixed effects
+===============================================================================
                           PanelOLS Estimation Summary
 ================================================================================
 Dep. Variable:         CO2_per_capita   R-squared:                        0.0537
 Estimator:                   PanelOLS   R-squared (Between):             -0.0492
 No. Observations:                2009   R-squared (Within):               0.0537
-Date:                Sat, Jul 18 2026   R-squared (Overall):             -0.0465
-Time:                        11:20:22   Log-likelihood                   -3520.8
+Date:                <reproduced>   R-squared (Overall):             -0.0465
+Time:                        <reproduced>   Log-likelihood                   -3520.8
 Cov. Estimator:             Clustered
                                         F-statistic:                      26.952
 Entities:                         104   P-value                           0.0000
@@ -40,14 +36,15 @@ Distribution: F(103,1901)
 
 Included effects: Entity
 
---- Full sample: Entity and year FE (preferred) ---
+Full sample | Entity and year fixed effects
+===============================================================================
                           PanelOLS Estimation Summary
 ================================================================================
 Dep. Variable:         CO2_per_capita   R-squared:                        0.0677
 Estimator:                   PanelOLS   R-squared (Between):              0.1502
 No. Observations:                2009   R-squared (Within):               0.0355
-Date:                Sat, Jul 18 2026   R-squared (Overall):              0.1328
-Time:                        11:20:22   Log-likelihood                   -3479.7
+Date:                <reproduced>   R-squared (Overall):              0.1328
+Time:                        <reproduced>   Log-likelihood                   -3479.7
 Cov. Estimator:             Clustered
                                         F-statistic:                      34.154
 Entities:                         104   P-value                           0.0000
@@ -77,16 +74,15 @@ Distribution: F(124,1880)
 
 Included effects: Entity, Time
 
-High Income: N=784, countries=41, years=1996-2020, avg obs/country=19.1, min=15, max=22
-
---- High Income: Entity FE (reference) ---
+High income | Entity fixed effects
+===============================================================================
                           PanelOLS Estimation Summary
 ================================================================================
 Dep. Variable:         CO2_per_capita   R-squared:                        0.0586
 Estimator:                   PanelOLS   R-squared (Between):             -0.1197
 No. Observations:                 784   R-squared (Within):               0.0586
-Date:                Sat, Jul 18 2026   R-squared (Overall):             -0.0999
-Time:                        11:20:22   Log-likelihood                   -1671.5
+Date:                <reproduced>   R-squared (Overall):             -0.0999
+Time:                        <reproduced>   Log-likelihood                   -1671.5
 Cov. Estimator:             Clustered
                                         F-statistic:                      11.501
 Entities:                          41   P-value                           0.0000
@@ -116,14 +112,15 @@ Distribution: F(40,739)
 
 Included effects: Entity
 
---- High Income: Entity and year FE (preferred) ---
+High income | Entity and year fixed effects
+===============================================================================
                           PanelOLS Estimation Summary
 ================================================================================
 Dep. Variable:         CO2_per_capita   R-squared:                        0.0662
 Estimator:                   PanelOLS   R-squared (Between):             -0.0053
 No. Observations:                 784   R-squared (Within):              -0.0835
-Date:                Sat, Jul 18 2026   R-squared (Overall):             -0.0125
-Time:                        11:20:22   Log-likelihood                   -1613.8
+Date:                <reproduced>   R-squared (Overall):             -0.0125
+Time:                        <reproduced>   Log-likelihood                   -1613.8
 Cov. Estimator:             Clustered
                                         F-statistic:                      12.733
 Entities:                          41   P-value                           0.0000
@@ -153,16 +150,15 @@ Distribution: F(61,718)
 
 Included effects: Entity, Time
 
-Low and Middle Income: N=1225, countries=63, years=1996-2020, avg obs/country=19.4, min=15, max=22
-
---- Low and Middle Income: Entity FE (reference) ---
+Low and middle income | Entity fixed effects
+===============================================================================
                           PanelOLS Estimation Summary
 ================================================================================
 Dep. Variable:         CO2_per_capita   R-squared:                        0.3169
 Estimator:                   PanelOLS   R-squared (Between):              0.5058
 No. Observations:                1225   R-squared (Within):               0.3169
-Date:                Sat, Jul 18 2026   R-squared (Overall):              0.4680
-Time:                        11:20:22   Log-likelihood                   -1135.5
+Date:                <reproduced>   R-squared (Overall):              0.4680
+Time:                        <reproduced>   Log-likelihood                   -1135.5
 Cov. Estimator:             Clustered
                                         F-statistic:                      134.31
 Entities:                          63   P-value                           0.0000
@@ -192,14 +188,15 @@ Distribution: F(62,1158)
 
 Included effects: Entity
 
---- Low and Middle Income: Entity and year FE (preferred) ---
+Low and middle income | Entity and year fixed effects
+===============================================================================
                           PanelOLS Estimation Summary
 ================================================================================
 Dep. Variable:         CO2_per_capita   R-squared:                        0.2169
 Estimator:                   PanelOLS   R-squared (Between):              0.5012
 No. Observations:                1225   R-squared (Within):               0.2946
-Date:                Sat, Jul 18 2026   R-squared (Overall):              0.4621
-Time:                        11:20:22   Log-likelihood                   -1120.6
+Date:                <reproduced>   R-squared (Overall):              0.4621
+Time:                        <reproduced>   Log-likelihood                   -1120.6
 Cov. Estimator:             Clustered
                                         F-statistic:                      78.720
 Entities:                          63   P-value                           0.0000
@@ -228,6 +225,3 @@ P-value: 0.0000
 Distribution: F(83,1137)
 
 Included effects: Entity, Time
-
-Implied two-way FE turning point (descriptive only): GDP/capita = $11,512. The quadratic term has p=0.107; because its confidence interval includes zero, a finite turning point is not statistically identified.
-
