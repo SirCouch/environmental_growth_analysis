@@ -67,7 +67,11 @@ def write_csv(frame: pd.DataFrame, path: str | Path) -> None:
         destination,
         index=False,
         lineterminator="\n",
-        float_format="%.12g",
+        # Solvers linked against different BLAS builds can differ in the last
+        # few floating-point bits. Ten significant digits preserve far more
+        # precision than the reports display while keeping canonical bytes
+        # stable across supported Windows runners.
+        float_format="%.10g",
         na_rep="",
     )
 

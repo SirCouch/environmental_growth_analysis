@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import json
 
-from environmental_growth.artifacts import verify_manifest
+import pandas as pd
+
+from environmental_growth.artifacts import verify_manifest, write_csv
 from environmental_growth.panel import sha256_file
 
 
@@ -24,3 +26,11 @@ def test_manifest_detects_altered_csv_and_figure(tmp_path):
     errors = verify_manifest(tmp_path)
     assert "manifest hash mismatch: coefficients.csv" in errors
     assert "manifest hash mismatch: figures/ekc_plot.png" in errors
+
+
+def test_canonical_csv_ignores_sub_precision_solver_noise(tmp_path):
+    first = tmp_path / "first.csv"
+    second = tmp_path / "second.csv"
+    write_csv(pd.DataFrame({"estimate": [0.145408801529]}), first)
+    write_csv(pd.DataFrame({"estimate": [0.145408801528]}), second)
+    assert first.read_bytes() == second.read_bytes()
