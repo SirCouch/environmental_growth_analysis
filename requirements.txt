@@ -1,9 +1,0 @@
-pandas
-numpy
-matplotlib
-seaborn
-requests
-wbdata
-linearmodels
-statsmodels
-openpyxl

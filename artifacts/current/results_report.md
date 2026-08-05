@@ -1,17 +1,14 @@
-<!-- GENERATED FILE: edit reports/README.template.md, then run `make report`. -->
+# Generated Results Report
+
 <!-- run-id: 3962cd88a1c8c051 -->
 
-# Environmental Growth Analysis
+Run `3962cd88a1c8c051` uses locked source snapshot `snapshot-f8168d697265`.
 
-This study tests the Environmental Kuznets Curve (EKC) hypothesis with a country-year panel of GDP per capita, CO2 emissions, tertiary enrollment, and rule of law. It compares high-income economies with a combined low- and middle-income sample.
-
-The analysis is designed so that source refresh and reproduction are separate operations. Run `make refresh-data` only when intentionally contacting live providers; `make reproduce`, `make report`, and `make verify` consume snapshot `snapshot-f8168d697265` without network access.
-
-## Sample selection
+## Resolved selection rule
 
 Retain eligible countries with at least 15 complete years from 1990–2020 across `GDP_per_capita`, `CO2_per_capita`, `Education_Tertiary`, `Rule_of_Law`.
 
-The 15-year minimum is fixed before estimation to require a sustained within-country trajectory. It is not tuned to coefficient significance. Present-day World Bank income classification is retained during this reproducibility refactor so that classification changes are not conflated with pipeline changes; historical or baseline-year classification belongs in a separately named sensitivity analysis.
+## Sample composition
 
 | sample_id         | n_observations   | n_countries   | n_observed_years   | first_year   | last_year   | mean_observations_per_country   | min_observations_per_country   | max_observations_per_country   |
 |:------------------|:-----------------|:--------------|:-------------------|:-------------|:------------|:--------------------------------|:-------------------------------|:-------------------------------|
@@ -19,13 +16,7 @@ The 15-year minimum is fixed before estimation to require a sustained within-cou
 | high_income       | 784              | 41            | 22                 | 1996         | 2020        | 19.122                          | 15                             | 22                             |
 | low_middle_income | 1225             | 63            | 22                 | 1996         | 2020        | 19.4444                         | 15                             | 22                             |
 
-## Methodology
-
-The dependent variable is `CO2_per_capita`. Regressors are GDP per capita in thousands of constant 2015 US dollars (`GDP_k`), its square (`GDP_sq`), `Rule_of_Law`, and `Education_Tertiary`.
-
-Each sample has a country fixed-effects reference model and a preferred country-plus-year fixed-effects model. Standard errors are clustered by country. Year effects absorb common annual shocks and global trends; neither specification eliminates simultaneity or omitted time-varying confounding, so results remain associational rather than causal.
-
-## Preferred-model results
+## Preferred-model coefficients
 
 | sample_id         | term               | estimate    | std_error   | p_value    | ci_lower    | ci_upper    |
 |:------------------|:-------------------|:------------|:------------|:-----------|:------------|:------------|
@@ -45,8 +36,6 @@ Each sample has a country fixed-effects reference model and a preferred country-
 | low_middle_income | Rule_of_Law        | -0.0324972  | 0.0264589   | 0.21962    | -0.084411   | 0.0194165   |
 | low_middle_income | Education_Tertiary | 0.00890269  | 0.00734733  | 0.225882   | -0.00551314 | 0.0233185   |
 
-Statistical non-significance is treated as limited information, not evidence that an effect is absent.
-
 ## Turning point
 
 The coefficient ratio implies $11,512, but the quadratic confidence interval includes zero. The finite turning point is therefore not statistically identified; the delta interval is recorded only as a mechanical diagnostic.
@@ -55,15 +44,7 @@ The coefficient ratio implies $11,512, but the quadratic confidence interval inc
 |:------------------|:---------------|:-------------------|:---------------|:---------------------------|:---------------------|:---------------------|:------------------|:---------------------|:---------------------|:---------------------|:-----------------------------|:-------------------|:-----------------------|:-----------------------|:------------------------------|:------------------------------------|
 | low_middle_income | entity_year_fe | 0.95               | 11511.6        | 2127.07                    | 7342.65              | 15680.6              | 1.08444           | -0.047102            | -0.104405            | 0.0102006            | True                         | True               | 227.198                | 14040.6                | True                          | finite_turning_point_not_identified |
 
-The turning point is a coefficient ratio. Its delta-method variance uses the full covariance matrix, and the identification guard prevents a finite threshold claim when the quadratic denominator is weakly identified. A Fieller or parametric-bootstrap interval would be a useful sensitivity analysis, but would supplement rather than replace this artifact.
-
-## Limitations
-
-Fixed effects do not resolve reverse causality between growth, institutions, education, and emissions, nor do they absorb omitted confounders that change differently across countries. Cross-country emissions, enrollment, governance, and national-accounts measures also contain error and may not be comparable across reporting systems or over time. Complete-case and coverage selection favor economies with stronger reporting systems, while retrospective use of a current income classification can misclassify countries' earlier development status. These constraints limit causal and population-wide interpretation.
-
-## Missingness
-
-Marginal missingness counts do not establish which variable “drives” complete-case loss because missing values overlap. The pipeline therefore emits both variable-level counts and joint missingness patterns. These facts can support a discussion of reporting-system selection, but do not by themselves establish its cause.
+## Missingness in the retained-country panel
 
 | scope                  | variable           | expected_rows   | observed_rows   | missing_count   | missing_percentage   | uniquely_excluded_rows   |
 |:-----------------------|:-------------------|:----------------|:----------------|:----------------|:---------------------|:-------------------------|
@@ -74,32 +55,4 @@ Marginal missingness counts do not establish which variable “drives” complet
 
 ## Figure
 
-![Environmental Kuznets Curve](artifacts/current/figures/ekc_plot.png)
-
-## Reproduction
-
-```bash
-uv sync --all-extras
-make reproduce
-make report
-make verify
-```
-
-On systems without Make, invoke the matching commands directly with `uv run environmental-growth <command>`.
-
-`make verify` regenerates the run in a temporary directory and checks committed outputs, generated README content, required files, and manifest hashes. CI verifies locked inputs; it does not contact live APIs.
-
-## Artifact index
-
-Run ID: `3962cd88a1c8c051`
-
-- [Run manifest](artifacts/current/run_manifest.json)
-- [Country universe](artifacts/current/country_universe.csv)
-- [Coverage audit](artifacts/current/country_coverage.csv)
-- [Sample flow](artifacts/current/sample_flow.csv)
-- [Coefficients](artifacts/current/coefficients.csv)
-- [Model diagnostics](artifacts/current/model_diagnostics.csv)
-- [Turning points](artifacts/current/turning_points.csv)
-- [Missingness by variable](artifacts/current/missingness_by_variable.csv)
-- [Missingness patterns](artifacts/current/missingness_patterns.csv)
-- [Complete results report](artifacts/current/results_report.md)
+![Environmental Kuznets Curve](figures/ekc_plot.png)

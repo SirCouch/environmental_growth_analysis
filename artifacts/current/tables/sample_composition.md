@@ -1,0 +1,5 @@
+| sample_id         | n_observations   | n_countries   | n_observed_years   | first_year   | last_year   | mean_observations_per_country   | min_observations_per_country   | max_observations_per_country   |
+|:------------------|:-----------------|:--------------|:-------------------|:-------------|:------------|:--------------------------------|:-------------------------------|:-------------------------------|
+| full_sample       | 2009             | 104           | 22                 | 1996         | 2020        | 19.3173                         | 15                             | 22                             |
+| high_income       | 784              | 41            | 22                 | 1996         | 2020        | 19.122                          | 15                             | 22                             |
+| low_middle_income | 1225             | 63            | 22                 | 1996         | 2020        | 19.4444                         | 15                             | 22                             |

@@ -3,3 +3,8 @@ AGENTS.md
 .venv/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+artifacts/.verify-*/
+data/snapshots/snapshot-building-*/

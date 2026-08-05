@@ -1,0 +1,24 @@
+| scope                  | missing_variables                                            | n_country_years   | percentage   | n_countries   |
+|:-----------------------|:-------------------------------------------------------------|:------------------|:-------------|:--------------|
+| eligible_universe      | <none>                                                       | 2614              | 38.8583      | 184           |
+| eligible_universe      | CO2_per_capita                                               | 26                | 0.386502     | 4             |
+| eligible_universe      | CO2_per_capita;Education_Tertiary                            | 116               | 1.72439      | 8             |
+| eligible_universe      | CO2_per_capita;Education_Tertiary;Rule_of_Law                | 102               | 1.51628      | 14            |
+| eligible_universe      | Education_Tertiary                                           | 1617              | 24.0375      | 177           |
+| eligible_universe      | Education_Tertiary;Rule_of_Law                               | 1132              | 16.8277      | 179           |
+| eligible_universe      | GDP_per_capita                                               | 35                | 0.520291     | 4             |
+| eligible_universe      | GDP_per_capita;CO2_per_capita                                | 3                 | 0.0445964    | 1             |
+| eligible_universe      | GDP_per_capita;CO2_per_capita;Education_Tertiary             | 12                | 0.178386     | 3             |
+| eligible_universe      | GDP_per_capita;CO2_per_capita;Education_Tertiary;Rule_of_Law | 152               | 2.25955      | 11            |
+| eligible_universe      | GDP_per_capita;CO2_per_capita;Rule_of_Law                    | 5                 | 0.0743273    | 2             |
+| eligible_universe      | GDP_per_capita;Education_Tertiary                            | 40                | 0.594619     | 7             |
+| eligible_universe      | GDP_per_capita;Education_Tertiary;Rule_of_Law                | 175               | 2.60146      | 14            |
+| eligible_universe      | GDP_per_capita;Rule_of_Law                                   | 19                | 0.282444     | 3             |
+| eligible_universe      | Rule_of_Law                                                  | 679               | 10.0937      | 162           |
+| retained_country_panel | <none>                                                       | 2009              | 62.3139      | 104           |
+| retained_country_panel | CO2_per_capita;Education_Tertiary;Rule_of_Law                | 1                 | 0.0310174    | 1             |
+| retained_country_panel | Education_Tertiary                                           | 278               | 8.62283      | 86            |
+| retained_country_panel | Education_Tertiary;Rule_of_Law                               | 467               | 14.4851      | 84            |
+| retained_country_panel | GDP_per_capita;Education_Tertiary;Rule_of_Law                | 16                | 0.496278     | 3             |
+| retained_country_panel | Rule_of_Law                                                  | 453               | 14.0509      | 99            |
+| analytic_sample        | <none>                                                       | 2009              | 100          | 104           |

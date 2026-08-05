@@ -1,0 +1,25 @@
+name: Verify locked analysis
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.9.18"
+          enable-cache: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.5"
+      - name: Install the locked environment
+        run: uv sync --all-extras --locked
+      - name: Run tests
+        run: uv run pytest
+      - name: Verify committed outputs without live APIs
+        run: uv run environmental-growth verify

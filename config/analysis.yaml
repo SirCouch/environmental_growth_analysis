@@ -1,0 +1,69 @@
+period:
+  start_year: 1990
+  end_year: 2020
+
+sources:
+  world_bank:
+    api_base: https://api.worldbank.org/v2
+    indicators:
+      NY.GDP.PCAP.KD: GDP_per_capita
+      SE.TER.ENRR: Education_Tertiary
+      RL.EST: Rule_of_Law
+  owid:
+    repository: owid/co2-data
+    branch: master
+    path: owid-co2-data.csv
+    source_column: co2_per_capita
+    output_column: CO2_per_capita
+
+country_universe:
+  exclude_aggregates: true
+  income_codes: [HIC, LIC, LMC, UMC]
+  classification_mode: current_snapshot
+  income_groups:
+    HIC: High Income
+    LIC: Low and Middle Income
+    LMC: Low and Middle Income
+    UMC: Low and Middle Income
+
+coverage:
+  required_variables:
+    - GDP_per_capita
+    - CO2_per_capita
+    - Education_Tertiary
+    - Rule_of_Law
+  minimum_complete_years: 15
+
+samples:
+  - id: full_sample
+    label: Full sample
+  - id: high_income
+    label: High income
+    income_groups: [High Income]
+  - id: low_middle_income
+    label: Low and middle income
+    income_groups: [Low and Middle Income]
+
+model:
+  dependent_variable: CO2_per_capita
+  regressors: [GDP_k, GDP_sq, Rule_of_Law, Education_Tertiary]
+  covariance_type: clustered_entity
+  preferred_model_id: entity_year_fe
+  specifications:
+    - id: entity_fe
+      label: Entity fixed effects
+      entity_effects: true
+      year_effects: false
+    - id: entity_year_fe
+      label: Entity and year fixed effects
+      entity_effects: true
+      year_effects: true
+
+turning_point:
+  sample_id: low_middle_income
+  model_id: entity_year_fe
+  linear_term: GDP_k
+  quadratic_term: GDP_sq
+  scale: 1000
+
+confidence_level: 0.95
