@@ -137,6 +137,7 @@ def _environment() -> dict[str, Any]:
     return {
         "python": platform.python_version(),
         "implementation": platform.python_implementation(),
+        "system": platform.system(),
         "packages": packages,
     }
 
